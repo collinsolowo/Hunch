@@ -1,0 +1,195 @@
+.global-footer {
+    background-color: #b5ec8e; /* Light green background */
+    padding: 2rem 4%;
+    font-family: sans-serif; /* or your preferred font */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /***************************************
+    TOP SECTION
+  ***************************************/
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap; /* let it wrap on smaller screens if needed */
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Left: Logo & Tagline */
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-right: 1rem; /* small spacing */
+  }
+  
+  .footer-logo {
+    width: 160px; /* bigger logo */
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-tagline {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /***************************************
+    MIDDLE SECTION (ROW)
+  ***************************************/
+  .footer-middle {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex: 1; /* occupy remaining space */
+    justify-content: center; /* center them horizontally */
+  }
+  
+  /* Quick Links */
+  .middle-links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-heading {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin: 0.5rem 0;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 0.25rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links li:hover {
+    color: #f44336; /* highlight color on hover */
+  }
+  
+  /* Contact */
+  .middle-contact {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-contact {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 0.25rem;
+  }
+  
+  /***************************************
+    RIGHT: Buttons
+  ***************************************/
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
+    margin-left: 1rem; /* small spacing */
+  }
+  
+  .jollof-btn,
+  .waitlist-btn {
+    background-color: #b5ec8e;
+    color: black;
+    border: 1px solid black;
+    padding: 0.6rem 1.2rem;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .jollof-btn:hover {
+    background-color: #f44336;
+    color: #fff;
+  }
+  
+  .waitlist-btn {
+    background-color: #f44336;
+    color: #fff;
+  }
+  .waitlist-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  /***************************************
+    BOTTOM BAR
+  ***************************************/
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 1rem;
+    width: 100%;
+  }
+  
+  .footer-bottom p {
+    font-size: 14px;
+    color: #444;
+  }
+  
+  /***************************************
+    RESPONSIVE
+  ***************************************/
+  /* At 768px or below, stack everything in one column, center them */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column; /* stack all items vertically */
+      align-items: center;    /* center horizontally */
+    }
+  
+    .footer-left {
+      align-items: center;
+      margin-right: 0; /* no extra spacing */
+      margin-bottom: 1rem;
+    }
+  
+    .footer-middle {
+      flex-direction: column; /* stack quick links + contact vertically */
+      gap: 1rem;
+      align-items: center;
+      margin: 1rem 0;
+    }
+  
+    .middle-links,
+    .middle-contact {
+      align-items: center; /* center the text */
+      text-align: center;
+    }
+  
+    .footer-right {
+      align-items: center; /* center the 2 buttons */
+      margin-left: 0;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-logo {
+      width: 130px;
+    }
+    .jollof-btn,
+    .waitlist-btn {
+      font-size: 13px;
+      padding: 0.5rem 1rem;
+    }
+  }
+  

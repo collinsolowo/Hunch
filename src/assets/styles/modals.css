@@ -1,0 +1,327 @@
+/* Overlay covers the entire screen and centers content */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  /* semi-transparent backdrop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  /* Ensure it sits above other elements */
+}
+
+/* Container for the "80% Healthy" lime modal */
+.health-modal {
+  background: #ffffff;
+  width: 350px;
+  /* adjust as needed */
+  height: auto;
+  padding: 20px 0px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  /* in case you add a close button or other elements */
+}
+
+/* Lime image styling */
+.health-image {
+  width: 200px;
+  /* adjust to match the exact size you want */
+  height: 250px;
+  margin-bottom: 15px;
+}
+
+/* Title text (e.g. "You're 80% Healthy!") */
+.health-title {
+  font-size: 1.1rem;
+  /* or match your exact design */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Additional descriptive text */
+.health-text {
+  font-size: 14px;
+  font-weight: 300;
+  width: 70%;
+  color: #555;
+  line-height: 1.4;
+}
+
+/*****************************************
+  COMMON OVERLAY (already in your file)
+******************************************/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/*****************************************
+  HUNCH ORDER CONFIRMATION MODAL
+******************************************/
+.hunch-order-modal {
+  position: relative;
+  width: 320px;
+  /* Adjust as needed */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px 24px;
+  text-align: center;
+}
+
+/* Header: "Order confirmation" and close button */
+.order-confirmation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.order-confirmation-label {
+  font-size: 0.9rem;
+  color: #999;
+  /* Lighter gray for a subtle label */
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #999;
+  /* Same color as label for a clean look */
+}
+
+/* The green Hunch box image */
+.hunch-order-image {
+  width: 200px;
+  /* Adjust to match the screenshot’s size */
+  height: auto;
+  margin: 0 auto 20px;
+  /* center horizontally & add bottom margin */
+  display: block;
+}
+
+/* "Order Received!" title */
+.order-received-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Main text for order details */
+.order-received-text {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+/* Link to track the order */
+.track-order-link {
+  display: inline-block;
+  font-size: 0.95rem;
+  color: #e62e04;
+  /* or whichever color you'd like for the link */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #999;
+}
+
+/***********************************************
+  COMMON OVERLAY (already in your file)
+***********************************************/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/***********************************************
+  SCOOTER ORDER CONFIRMATION MODAL
+***********************************************/
+.hunch-order-scooter-modal {
+  position: relative;
+  width: 320px;
+  /* Adjust as needed */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px 24px;
+  text-align: center;
+}
+
+/* Header at the top: "Order confirmation" + close button */
+.order-confirmation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.order-confirmation-label {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* If you want the close button absolutely positioned:
+   remove it from the flex layout and do something like:
+   .close-button {
+     position: absolute;
+     top: 16px;
+     right: 16px;
+     ...
+   }
+*/
+.close-button {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #999;
+}
+
+/* Scooter + dotted arc image */
+.order-scooter-image {
+  width: 200px;
+  /* Adjust to match screenshot */
+  height: auto;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+/* "Order Received!" heading */
+.order-received-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Main text below heading */
+.order-received-text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+/* Make the order ID stand out in red */
+.order-id {
+  color: #e62e04;
+  font-weight: bold;
+}
+
+/* Link for "Track my order" */
+.track-order-link {
+  display: inline-block;
+  font-size: 0.95rem;
+  color: #e62e04;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*********************************************
+  PAYMENT SUCCESS MODAL
+*********************************************/
+.payment-success-modal {
+  position: relative;
+  width: 320px;
+  /* Adjust as needed */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px 24px;
+  text-align: center;
+}
+
+/* Header with label on the left, close button on the right */
+.payment-success-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.payment-success-label {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* If you want the close button to be absolute, remove from flex layout and do:
+   .close-button {
+     position: absolute;
+     top: 16px;
+     right: 16px;
+     ...
+   }
+*/
+
+/* Success check icon (green check with star background) */
+.payment-success-image {
+  width: 200px;
+  /* adjust to match your design */
+  height: auto;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+/* Main payment success text */
+.payment-success-text {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+/* Emphasize the payment amount in red */
+.payment-amount {
+  color: #e62e04;
+  font-weight: bold;
+}
+
+/* Reuse or adapt the existing .track-order-link styles */
+.track-order-link {
+  display: inline-block;
+  font-size: 0.95rem;
+  color: #e62e04;
+  text-decoration: none;
+  cursor: pointer;
+}

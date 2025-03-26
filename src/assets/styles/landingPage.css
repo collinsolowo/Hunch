@@ -1,0 +1,539 @@
+/***************************************
+  BANNER WRAPPER (unchanged)
+***************************************/
+.landing-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('/src/assets/images/landingBanner.png') center center / cover no-repeat;
+}
+
+.landing-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.landing-contents {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+  color: #fff;
+  top: 80px;
+}
+
+.landing-subtitle {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  max-width: 800px;
+}
+
+.landing-title {
+  font-size: 19px;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  line-height: 1.2;
+  width: 40%;
+}
+
+.landing-button {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 11px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.landing-button:hover {
+  background-color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+  .landing-subtitle {
+    font-size: 40px;
+  }
+
+  .landing-title {
+    font-size: 15px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-subtitle {
+    font-size: 30px;
+  }
+
+  .landing-title {
+    font-size: 13px;
+    width: 95%;
+  }
+}
+
+/***************************************
+  LANDING INFO SECTION
+***************************************/
+.landing-info {
+  width: 100%;
+  min-height: 500px;
+  /* Adjust as needed */
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 4%;
+  /* Helps center content vertically if slices are tall */
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Left side: three slices container */
+.info-img-grid {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  /* spacing between slices */
+}
+
+/* Each slice */
+.image-slice {
+  width: 150px;
+  height: 300px;
+  background-image: url('/src/assets/images/infoImg1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 9999px;
+  border: 2px solid #ddd;
+  overflow: hidden;
+}
+
+/* Force each slice to show a different portion of the same image */
+.slice1 {
+  background-position: left center;
+  width: 100px;
+  height: 260px;
+}
+
+.slice2 {
+  background-position: center center;
+}
+
+.slice3 {
+  background-position: right center;
+  width: 100px;
+  height: 260px;
+}
+
+/* Right side: info details */
+.info-details {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.info-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-heading i {
+  color: #7fb336;
+  /* Example color for the bowl icon */
+  font-size: 24px;
+}
+
+.info-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+/* Features container */
+.info-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Each feature card */
+.info-feature {
+  flex: 1 1 calc(50% - 1.5rem);
+  /* 2 columns on desktop, with gap */
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  min-width: 200px;
+}
+
+.food-bowl {
+  width: 80px;
+}
+
+.info-feature i {
+  font-size: 28px;
+  color: #7fb336;
+  /* example icon color */
+  margin-top: 3px;
+  /* small nudge down if needed */
+  background-color: rgb(199, 235, 199);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.feature-text h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.feature-text p {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 992px) {
+  .landing-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info-img-grid,
+  .info-details {
+    width: 100%;
+  }
+
+  .info-img-grid {
+    margin-bottom: 1.5rem;
+    justify-content: center;
+  }
+
+  .info-feature {
+    flex: 1 1 100%;
+  }
+}
+
+
+/***************************************
+  MEAL PLANS SECTION
+***************************************/
+.meal-plans {
+  text-align: center;
+  padding: 4rem 4%;
+  background-color: #f9f9f9;
+  /* or white, match your design */
+}
+
+.meal-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.meal-subtext {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+}
+
+/* Carousel Container */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.carousel-btn {
+  background: #fff;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #e5e5e5;
+}
+
+.left {
+  margin-right: 1rem;
+}
+
+.right {
+  margin-left: 1rem;
+}
+
+/* Meal Cards Wrapper */
+.meal-cards {
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+  /* hide the overflow for the “slide” effect */
+  width: 90%;
+}
+
+/* Individual Meal Card */
+.meal-card {
+  flex: 0 0 calc(33.333% - 1rem);
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.meal-card:hover {
+  transform: scale(1.03);
+}
+
+.meal-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.meal-info {
+  padding: 1rem;
+  text-align: left;
+}
+
+.meal-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.meal-info p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.learn-more {
+  font-weight: 600;
+  color: #7fb336;
+  text-decoration: none;
+}
+
+.learn-more:hover {
+  text-decoration: underline;
+}
+
+/* Icons in Info Section (to style them like the original .fa icons) */
+.feature-icon {
+  font-size: 34px;
+  color: #7fb336;
+  margin-top: 3px;
+  background-color: #c5d7ab;
+  padding: 0px 10px;
+  border-radius: 50%;
+}
+
+.jollof-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 4%;
+  /* Two columns side by side by default */
+}
+
+.jollof-left {
+  flex: 1;
+  text-align: center;
+}
+
+.jollof-image {
+  width: 300px;
+  /* Adjust as desired */
+  max-width: 100%;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.jollof-title {
+  font-size: 1.8rem;
+  /* Adjust to match your design */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.jollof-subtitle {
+  font-size: 1rem;
+  color: #555;
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+.jollof-right {
+  flex: 1;
+  background-color: #f4f8f2;
+  /* A light greenish/grayish background to match your pic */
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.jollof-count {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.jollof-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* All form controls */
+.jollof-form input,
+.jollof-form select,
+.jollof-form textarea {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  /* Rounder corners */
+  outline: none;
+  background-color: #fff;
+}
+
+.jollof-form input:focus,
+.jollof-form select:focus,
+.jollof-form textarea:focus {
+  border-color: #7fb336;
+  /* brand color */
+  box-shadow: 0 0 0 2px rgba(127, 179, 54, 0.2);
+  /* subtle focus ring */
+}
+
+/* Two fields side by side */
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.row div {
+  flex: 1;
+}
+
+/* "World-class" custom select arrow */
+.jollof-form select {
+  /* Remove default arrow in many browsers */
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  /* Add custom arrow using a background image */
+  background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMuY29tLzIwMDAvc3ZnIj48ZyBmaWxsPSIjNzc3Ij48cGF0aCBkPSJNMS4yOS4yOWExLjAwNCAxLjAwNCAwIDAgMSAxLjQxIDBsMy4zIDMuMyAzLjMtMy4zYTEuMDA0IDEuMDA0IDAgMCAxIDEuNDEgMCAxIDEgMCAwIDAgMCAxLjQxbC00LjAzIDQuMDNhMS4wMDQgMS4wMDQgMCAwIDEtMS40MSAwTDAuMiAxLjcwMWExLjAwNCAxLjAwNCAwIDAgMSAwLTEuNDF6Ii8+PC9nPjwvc3ZnPg==") no-repeat right 0.75rem center / 12px auto;
+  padding-right: 2rem;
+  /* space for arrow */
+}
+
+/* Submit Button */
+.order-btn {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* RESPONSIVE: Switch to column at 800px */
+@media (max-width: 800px) {
+  .jollof-section {
+    flex-direction: column;
+  }
+
+  .jollof-left,
+  .jollof-right {
+    width: 100%;
+  }
+
+  .jollof-image {
+    margin-bottom: 1rem;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive: stack meal cards or reduce them if needed */
+@media (max-width: 992px) {
+  .meal-cards {
+    width: 100%;
+  }
+
+  .meal-card {
+    flex: 0 0 calc(100% / 3 - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .meal-card {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .meal-card {
+    flex: 0 0 100%;
+  }
+}

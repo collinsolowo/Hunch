@@ -1,0 +1,152 @@
+/* NAVBAR CONTAINER */
+.navbar {
+    /* full width, fixed height */
+    width: 100%;
+    height: 80px;
+  
+    /* space content horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 9999;
+  
+    /* background color, padding, etc. */
+    background-color: #fff;
+    padding: 0 2rem;
+  
+    /* optional subtle shadow for a modern look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* LOGO SECTION */
+  .nav-logo {
+    width: 170px;
+    height: auto; /* let the image define its own height */
+  }
+  
+  .nav-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  /* HAMBURGER ICON: hidden by default on large screens */
+  .hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* NAV CONTENTS WRAPPER */
+  .nav-contents {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* spacing between nav-list & buttons */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* NAV LIST (desktop) */
+  .nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* spacing between each <li> */
+    margin: 0; /* remove default ul margin/padding */
+    padding: 0;
+  }
+  
+  .nav-list li {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all ease-in-out 500ms;
+    /* You can style text color, hover effects, etc. */
+  }
+
+  .nav-list li:hover{
+    color: rgb(134, 216, 11);
+    transition: all ease-in-out 500ms;
+  }
+  
+  /* NAV BUTTONS */
+  .nav-btns {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* INDIVIDUAL BUTTONS */
+  .nav-white-btn,
+  .nav-red-btn {
+    padding: 0.5rem 1.2rem;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none; /* remove default button border */
+  }
+  
+  /* White button styling */
+  .nav-white-btn {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #434343; /* subtle border */
+  }
+  
+  /* Red button styling */
+  .nav-red-btn {
+    background-color: #E94949;
+    color: #fff;
+  }
+  
+  /* -------------------------------
+     MEDIA QUERY FOR SCREENS < 800PX
+     ------------------------------- */
+  @media (max-width: 800px) {
+    /* Show the hamburger */
+    .hamburger {
+      display: block;
+    }
+  
+    /* Hide the nav-contents by default */
+    .nav-contents {
+      /* position it absolutely below the navbar */
+      position: absolute;
+      top: 80px;
+      right: 0;
+      width: 100%;
+      background-color: #fff;
+  
+      /* 0 height means hidden dropdown */
+      height: 0;
+      overflow: hidden;
+  
+      /* Switch to column layout for the menu */
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+  
+      /* Add transition so it "slides" open */
+      transition: height 0.3s ease-in-out;
+    }
+  
+    /* When .nav-contents has .open class, expand it */
+    .nav-contents.open {
+      height: 300px; /* or auto, but fixed helps the slide effect */
+      padding: 1rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  
+    /* Stacking nav-list items vertically */
+    .nav-list {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    /* Also stack the buttons vertically if you like */
+    .nav-btns {
+      flex-direction: column;
+    }
+  }
+  

@@ -1,0 +1,104 @@
+.how-it-works {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  /* adjust if needed */
+}
+
+/* Main Heading */
+.how-title {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.title-icon {
+  width: 40px;
+  /* adjust size as needed */
+  height: auto;
+}
+
+/* Subheading */
+.how-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Row containing steps and wave connectors */
+.steps-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* so it doesn't overflow on smaller screens */
+  gap: 0.5rem;
+  width: 100%;
+  padding: 30px 0px;
+  margin: 0 auto;
+}
+
+/* Each step block */
+.step-block {
+  width: 220px;
+  /* or whatever fits your design */
+  text-align: center;
+}
+
+/* Circular label at the top of each step */
+.circle {
+  width: 60px;
+  height: 60px;
+  background-color: #d1debf;
+  border-radius: 50%;
+  color: #7fb336;
+  /* text color */
+  font-weight: 400;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  /* center + spacing below */
+}
+
+/* Step titles */
+.step-block h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* Step descriptions */
+.step-block p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* The wave image (dotted line) between steps */
+.wave-img {
+  width: 80px;
+  /* adjust to match the wave’s design */
+  height: auto;
+}
+
+/* Responsive: hide wave connectors on smaller screens, stack steps */
+@media (max-width: 768px) {
+  .wave-img {
+    display: none;
+  }
+
+  .step-block {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}

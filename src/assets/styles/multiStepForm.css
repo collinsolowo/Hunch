@@ -1,0 +1,336 @@
+/* Container */
+.multistep-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+/* Heading & Subtitle */
+.multistep-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.multistep-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.multistep-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Steps Indicator */
+.steps-indicator {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #f44336;
+  color: #f44336;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.step-number.active {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.step-label {
+  font-size: 12px;
+  margin-top: 0.25rem;
+  max-width: 80px;
+  color: #444;
+}
+
+/* The horizontal progress line behind the steps */
+.progress-line {
+  position: absolute;
+  top: 20px;
+  /* halfway through step-number */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f5f5f5;
+  z-index: -1;
+}
+
+/* The red fill that grows as steps progress */
+.progress-fill {
+  height: 2px;
+  background-color: #f44336;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* Form Card (the box around the inputs) */
+.form-card {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+/* form fields */
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Each label + input grouping */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #f44336;
+}
+
+/* Row grouping for two fields side-by-side */
+.row-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.row-group .form-group {
+  flex: 1;
+}
+
+/* Buttons */
+.form-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.prev-btn,
+.continue-btn {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.prev-btn {
+  background-color: transparent;
+  color: #f44336;
+  border: 2px solid #f44336;
+  margin-right: auto;
+  /* push to left */
+}
+
+.prev-btn:hover {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.continue-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .step-label {
+    display: none;
+    /* hide step text if needed for space */
+  }
+
+  .row-group {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .multistep-title {
+    font-size: 20px;
+  }
+
+  .form-card {
+    padding: 1.5rem;
+  }
+
+  .row-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .prev-btn,
+  .continue-btn {
+    font-size: 13px;
+    padding: 0.6rem 1rem;
+  }
+}
+
+/***************************************
+  WAITLIST BOX
+***************************************/
+.waitlist-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.waitlist-box {
+  background-color: #ffe6e6;
+  /* pale red/pink background */
+  border: 2px solid #f44336;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.waitlist-box h3 {
+  font-size: 18px;
+  color: #d32f2f;
+  margin-bottom: 0.5rem;
+}
+
+.waitlist-box p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.waitlist-box a {
+  color: #f44336;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/***************************************
+  HEALTH CALCULATOR
+***************************************/
+.calculator-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.calculator-card {
+  background-color: #fff;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.calculator-card h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.calc-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.calc-row div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.calc-row label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.calc-row input,
+.calc-row select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.generate-btn {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.generate-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive for calculator */
+@media (max-width: 600px) {
+  .calc-row {
+    flex-direction: column;
+  }
+}

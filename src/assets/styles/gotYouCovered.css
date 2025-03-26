@@ -1,0 +1,173 @@
+/***************************************
+  SECTION BACKGROUND & TEXT
+***************************************/
+.covered-section {
+    background-color: #e6ecd9; /* Light greenish background */
+    padding: 3rem 4%;
+    text-align: center;
+  }
+  
+  .covered-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .covered-heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: #4b4f39; /* darker greenish text */
+    margin-bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .heading-icon {
+    width: 60px;
+    height: 60px;
+    mix-blend-mode: color-burn; /* optional effect */
+  }
+  
+  .covered-subtitle {
+    font-size: 16px;
+    color: #5f6542;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /***************************************
+    CAROUSEL
+  ***************************************/
+  .covered-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 1rem;
+  }
+  
+  /* Left/Right Arrow Buttons */
+  .carousel-btn {
+    background: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50%;
+    color: #333;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+  .carousel-btn:hover {
+    background-color: #f2f2f2;
+  }
+  .left {
+    margin-right: 1rem;
+  }
+  .right {
+    margin-left: 1rem;
+  }
+  
+  /* Wrapper to show 5 chips at a time */
+  .chips-wrapper {
+    display: flex;
+    gap: 1rem;
+    overflow-x: hidden; /* horizontal scroll hidden for the “slide” effect */
+    overflow-y: visible; /* so the select isn't clipped */
+    width: 80%;
+  }
+  
+  /***************************************
+    INDIVIDUAL CHIP
+  ***************************************/
+  .chip {
+    flex: 0 0 calc(100% / 5 - 1rem); /* show 5 chips horizontally */
+    background-color: #317a1f1a;     /* faint greenish background */
+    border: 1px solid #709467;       /* faint greenish border */
+    border-radius: 4px;
+    padding: 6px 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    color: #333;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+    white-space: nowrap; /* prevent line-breaks */
+  }
+  
+  /* Hover "illumination" */
+  .chip:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 8px rgba(112, 148, 103, 0.4);
+  }
+  
+  /* Icon on the left */
+  .chip-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /***************************************
+    NATIVE SELECT
+  ***************************************/
+  .chip-select {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 0.75rem;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    white-space: nowrap;
+    -webkit-appearance: none; /* remove default arrow in Safari/Chrome */
+    -moz-appearance: none;    /* remove default arrow in Firefox */
+    text-overflow: ellipsis;
+    padding-right: 1.5rem; /* space for arrow */
+  
+    /* A bigger, darker arrow */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5jb20vMjAwMC9zdmc+iHJlbW92ZSBmb2N1c2FibGU9ImZhbHNlIj48cGF0aCBkPSJNNC4yOTUgNi4yOTVhMS4wMDQgMS4wMDQgMCAwIDEgMS40MSAwbDMuMyAzLjMgMy4zLTMuM2ExLjAwNCAxLjAwNCAwIDAgMSAxLjQxIDAgMSAxIDAgMCAwIDAgMS40MUw4LjcwMSAxMi4zMDNhMS4wMDQgMS4wMDQgMCAwIDEtMS40MSAwbC00LjAzLTQuMDNhMS4wMDQgMS4wMDQgMCAwIDEtLjAwMS0xLjQxeiIgZmlsbD0iIzMzMyIvPjwvc3ZnPg==");
+    background-repeat: no-repeat;
+    background-position: right 0.25rem center;
+    background-size: 16px auto;
+  }
+  
+  .chip-select:focus {
+    box-shadow: 0 0 3px #709467;
+    border-radius: 4px;
+  }
+  
+  /* Option styling (limited in many browsers) */
+  .chip-select option {
+    background-color: #cfe3c7; /* theme color for dropdown items */
+    color: #333;
+    font-size: 0.8rem;
+  }
+  
+  /***************************************
+    RESPONSIVE
+  ***************************************/
+  @media (max-width: 992px) {
+    .chips-wrapper {
+      width: 100%;
+    }
+    .chip {
+      flex: 0 0 calc(100% / 3 - 1rem); /* show 3 chips at a time on mid screens */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .carousel-btn {
+      font-size: 18px;
+    }
+    .chip {
+      flex: 0 0 calc(100% / 2 - 1rem); /* 2 chips at a time on small screens */
+    }
+  }
+  

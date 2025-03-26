@@ -1,0 +1,163 @@
+.order-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 4%;
+    font-family: sans-serif; /* or your chosen font */
+    position: relative;
+    top: 80px;
+  }
+  
+  /* Left side */
+  .order-left {
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+    background-color: #e3ebe1;
+    border-radius: 10px;
+    z-index: 1;
+    padding: 30px 5px;
+  }
+  
+  .no-orders-img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 1rem;
+    display: block;
+    z-index: 3;
+  }
+  
+  .order-left h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .order-left p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+  }
+  
+  /* Middle arrow */
+  .arrow-container {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+  }
+  
+  .arrow-img {
+    width: 100px; /* adjust as needed */
+    height: auto;
+  }
+  
+  /* Right side form */
+  .order-right {
+    flex: 1;
+    max-width: 450px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .order-header h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 0.25rem;
+  }
+  .order-header p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .jollof-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  /* Labels & inputs */
+  .jollof-form label {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  
+  .jollof-form input,
+  .jollof-form select,
+  .jollof-form textarea {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+  }
+  
+  .jollof-form input:focus,
+  .jollof-form select:focus,
+  .jollof-form textarea:focus {
+    border-color: #7fb336; /* brand color highlight */
+  }
+  
+  /* Row group for No + Street + City/LGA */
+  .row-group {
+    display: flex;
+    gap: 0.75rem;
+  }
+  .row-group > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Textarea styling */
+  .jollof-form textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+  
+  /* Submit button */
+  .order-btn {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  .order-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  /***************************************
+    RESPONSIVE
+  ***************************************/
+  @media (max-width: 768px) {
+    .order-section {
+      flex-direction: column; /* stack */
+      align-items: center;
+    }
+  
+    .arrow-container {
+      transform: rotate(90deg); /* rotate arrow downward */
+      margin: 1rem 0;
+    }
+  
+    .order-left,
+    .order-right {
+      max-width: 100%;
+    }
+  }
+  

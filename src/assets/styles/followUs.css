@@ -1,0 +1,61 @@
+.follow-us-section {
+    text-align: center;
+    padding: 2rem 4%;
+    font-family: sans-serif; /* or your preferred font */
+  }
+  
+  .follow-subtext {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 0.75rem;
+    font-style: italic; /* if you want to mimic the smaller “Did you know?” vibe */
+  }
+  
+  .follow-heading {
+    font-size: 20px;  /* adjust to match your design */
+    font-weight: 700;
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Lightbulb icon next to the heading text */
+  .bulb-icon {
+    width: 40px;   /* adjust as needed */
+    height: auto;
+  }
+  
+  /* Social icons row */
+  .social-icons-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* spacing between icons */
+  }
+  
+  /* Each icon link */
+  .social-icons-row a {
+    color: #333; /* default icon color */
+    font-size: 24px; /* icon size */
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons-row a:hover {
+    color: #f44336; /* highlight color on hover */
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .follow-heading {
+      font-size: 18px;
+    }
+    .bulb-icon {
+      width: 30px;
+    }
+    .social-icons-row a {
+      font-size: 20px;
+    }
+  }
+  

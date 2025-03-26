@@ -1,0 +1,257 @@
+.track-order-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 4%;
+    font-family: sans-serif; /* match your project's font */
+    box-sizing: border-box;
+    position: relative;
+    top: 80px;
+    height: auto;
+  }
+  
+  /* -- LEFT COLUMN: Jollof Details -- */
+  .jollof-details {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .jollof-image img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    max-height: 220px;
+  }
+  
+  .jollof-info h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .jollof-info-items p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .jollof-desc {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+  }
+  
+  /* -- MIDDLE COLUMN: Order Summary & Map -- */
+  .order-summary-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Summary Card */
+  .order-summary-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .order-summary-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .summary-item span.item-label {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .summary-item.total span.item-label {
+    color: #f44336;
+  }
+  
+  .summary-item.total span.item-value {
+    font-weight: 700;
+    color: #f44336;
+  }
+  
+  /* Map Card */
+  .map-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .map-card h4 {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .map-container {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  
+  /* -- RIGHT COLUMN: Order Status & Driver Contact -- */
+  .order-status-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Status Card */
+  .status-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .status-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  /* Single status item */
+  .status-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .status-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    margin-top: 4px; /* to align with text */
+  }
+  
+  .status-text strong {
+    color: #333;
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  
+  .status-text p {
+    font-size: 0.85rem;
+    color: #555;
+  }
+  
+  /* Active status changes dot color */
+  .status-item.active .status-dot {
+    border-color: #f44336;
+    background-color: #f44336;
+  }
+  
+  /* Contact Driver */
+  .contact-driver {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .contact-driver h4 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+  }
+  
+  .driver-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .driver-photo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #f44336; /* or your brand color */
+  }
+  
+  .driver-name {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+  }
+  
+  .driver-phone {
+    font-size: 0.85rem;
+    color: #555;
+  }
+
+  .pay-btn {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  .pay-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  
+  /* -------------------------
+     RESPONSIVE
+  ----------------------------*/
+  @media (max-width: 992px) {
+    .track-order-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .map-container {
+      height: 250px; /* increase map height on medium screens if desired */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .track-order-container {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  
+    .jollof-image img {
+      max-height: 180px;
+    }
+  
+    .map-container {
+      height: 200px;
+    }
+  }
+  
